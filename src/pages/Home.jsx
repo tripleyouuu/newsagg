@@ -1,0 +1,41 @@
+// src/pages/Home.jsx
+import { useEffect, useState } from "react"
+import { ArticleCard } from "../components/ArticleCard"
+
+const API_KEY = "aa6b4ff5e49545cab2f0a64234f3198c"
+const URL = `https://newsapi.org/v2/top-headlines?country=us&apiKey=${API_KEY}`
+
+export function Home() {
+  const [articles, setArticles] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(false)
+
+  useEffect(() => {
+    fetch(URL)
+      .then((res) => res.json())
+      .then((data) => {
+        setArticles(data.articles || [])
+        setLoading(false)
+      })
+      .catch(() => {
+        setError(true)
+        setLoading(false)
+      })
+  }, [])
+
+  if (loading) return <p className="text-center">Loading top headlines...</p>
+  if (error) return <p className="text-center text-red-600">Failed to load news.</p>
+
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-6">Top Headlines</h1>
+      <div className="article-grid">
+        {articles.map((article) => (
+          <div key={article.url} className="article-card">
+            <ArticleCard article={article} />
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}

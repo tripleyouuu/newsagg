@@ -1,0 +1,67 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Global font and background */
+body {
+  margin: 0;
+  font-family: 'Special Elite', monospace;
+  background-color: #fdf6e3;
+  color: #3e3e3e;
+}
+
+/* Article grid layout */
+.article-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+/* Individual article card */
+.article-card {
+  width: 300px;
+  background-color: #fefae0;
+  border: 1px solid #d6c6a3;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Navbar wrapper */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fefae0;
+  border-bottom: 1px solid #d6c6a3;
+  padding: 1rem 2rem;
+}
+
+/* Nav items layout */
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Nav link style */
+.nav-link {
+  text-decoration: none;
+  color: #555;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.nav-link.active {
+  color: #000;
+  font-weight: bold;
+  border-bottom: 2px solid #000;
+}
