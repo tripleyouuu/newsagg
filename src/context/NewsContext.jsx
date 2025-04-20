@@ -1,4 +1,3 @@
-// src/context/NewsContext.jsx
 import { createContext, useState, useContext, useEffect } from "react"
 
 const NewsContext = createContext()
