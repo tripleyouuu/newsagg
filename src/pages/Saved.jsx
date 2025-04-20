@@ -5,8 +5,8 @@ export function Saved() {
   const { savedArticles } = useNews()
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Saved Articles</h1>
+    <main>
+      <center><h1 className="text-2xl font-bold mb-4">Saved Articles</h1></center>
       {savedArticles.length === 0 ? (
         <p className="text-gray-600">You haven’t saved any articles yet.</p>
       ) : (
@@ -14,6 +14,6 @@ export function Saved() {
           <ArticleCard key={article.url} article={article} />
         ))
       )}
-    </div>
+    </main>
   )
 }

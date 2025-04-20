@@ -28,7 +28,7 @@ export function Home() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-6">Top Headlines</h1>
+    <center><h1 className="text-2xl font-bold">Top Headlines</h1></center>
       <div className="article-grid">
         {articles.map((article) => (
           <div key={article.url} className="article-card">

@@ -29,8 +29,8 @@ export function Search() {
   }
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Search Articles</h1>
+    <main>
+      <center><h1 className="text-2xl font-bold mb-4">Search Articles</h1></center>
       <form onSubmit={handleSubmit} className="mb-6">
         <input
           type="text"
@@ -50,7 +50,7 @@ export function Search() {
       {loading && <p className="text-gray-600">Searching...</p>}
       {error && <p className="text-red-600">Error loading results.</p>}
       {!loading && !error && articles.length > 0 && (
-        <div>
+        <div className="results">
           {articles.map((article) => (
             <ArticleCard key={article.url} article={article} />
           ))}
@@ -59,6 +59,6 @@ export function Search() {
       {!loading && !error && articles.length === 0 && query && (
         <p>No results found for "{query}".</p>
       )}
-    </div>
+    </main>
   )
 }

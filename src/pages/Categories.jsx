@@ -25,9 +25,8 @@ export function Categories() {
   }, [selected])
 
   return (
-    <div>
-      <h1 className="text-2xl font-bold mb-4">Browse by Category</h1>
-
+    <main>
+      <center><h1 className="text-2xl font-bold mb-4">Browse by Category</h1></center>
       <div className="flex flex-wrap gap-3 mb-6">
         {categories.map((cat) => (
           <button
@@ -55,6 +54,6 @@ export function Categories() {
             <ArticleCard key={article.url} article={article} />
           ))
         ))}
-    </div>
+    </main>
   )
 }

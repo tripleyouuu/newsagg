@@ -1,8 +1,8 @@
 /* src/index.css */
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 
 /* Global font and background */
 body {
@@ -10,6 +10,21 @@ body {
   font-family: 'Special Elite', monospace;
   background-color: #fdf6e3;
   color: #3e3e3e;
+
+  main, .nav-links{
+    margin-left: 35px;
+  }
+
+  .article-grid , .results{
+    margin-right: 45px;
+  }
+
+  
+  h1 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
 }
 
 /* Article grid layout */
