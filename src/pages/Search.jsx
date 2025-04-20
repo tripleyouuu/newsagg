@@ -36,7 +36,7 @@ export function Search() {
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="e.g. climate change"
+          placeholder="What's on your mind?"
           className="p-2 border border-[#d6c6a3] bg-[#fefae0] w-64 rounded-l"
         />
         <button
