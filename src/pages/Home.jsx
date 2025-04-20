@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react"
 import { ArticleCard } from "../components/ArticleCard"
 
-const API_KEY = 'aa6b4ff5e49545cab2f0a64234f3198c';
-const URL = `https://newsapi.org/v2/top-headlines?country=us&pageSize=32&apiKey=${API_KEY}`;
-
+const URL = "/api/news"
 
 export function Home() {
   const [articles, setArticles] = useState([])
