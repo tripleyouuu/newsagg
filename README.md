@@ -1,12 +1,49 @@
-# React + Vite
+# 📰 News Aggregator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple, professional, old-timey news aggregator built with **React**, **Tailwind CSS**, and the **NewsAPI**. Users can browse top headlines, filter by category, view article details, and save favorite posts with persistent storage via `localStorage`.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live Demo
 
-## Expanding the ESLint configuration
+Find the project deployed at: https://newsagg.vercel.app/
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## ℹ️ Disclaimer
+
+This project was developed for a term assignment as part of my undergrad course. It isn't for commercial purposes, or meant to be taken too seriously!
+
+---
+
+## 🧰 Tech Stack
+
+- **React** (Components, Hooks, Props, Conditional Rendering, Forms, Lists)
+- **React Router** (multi-page navigation)
+- **React Context API** (global state for saved articles)
+- **Tailwind CSS** (custom neutral / sepia design)
+- **NewsAPI** ([https://newsapi.org](https://newsapi.org))
+- **LocalStorage** (to persist saved articles)
+- **Vercel** for deployment.
+
+---
+
+## 📁 Features
+
+- 📰 **Home**: Top headlines laid out in a responsive flexbox grid  
+- 🎛️ **Categories**: Filter news by category (Business, Tech, Health, etc.)  
+- 🔎 **Search**: Type in a current affairs topic to find relevant articles
+- 💾 **Saved**: Save and persist your favorite articles  
+- 📖 **Source Article**: Click links attached to each article for the original  
+- 📱 **Responsive**: Mobile and desktop ready
+- 🎨 **Typography**: Newspaper-inspired font and parchment-style design
+
+---
+
+## 💡 Future Improvements
+
+- Pagination
+- Search bar with debouncing
+- Dark mode toggle
+- Backend storage for saved posts (MongoDB/Firebase)
+- Authentication with saved feeds
