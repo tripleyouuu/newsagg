@@ -12,7 +12,7 @@ export function Categories() {
 
   useEffect(() => {
     setLoading(true)
-    fetch(`https://newsapi.org/v2/top-headlines?country=us&category=${selected}&apiKey=${API_KEY}`)
+    fetch(`/api/news?category=${selected}`)
       .then((res) => res.json())
       .then((data) => {
         setArticles(data.articles || [])

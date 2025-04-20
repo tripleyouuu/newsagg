@@ -16,7 +16,7 @@ export function Search() {
     setLoading(true)
     setError(false)
 
-    fetch(`https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${API_KEY}`)
+    fetch(`/api/news?q=${encodeURIComponent(query)}`)
       .then((res) => res.json())
       .then((data) => {
         setArticles(data.articles || [])
