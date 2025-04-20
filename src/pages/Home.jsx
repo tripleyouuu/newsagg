@@ -10,8 +10,21 @@ export function Home() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(false)
 
+  // useEffect(() => {
+  //   fetch(URL)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setArticles(data.articles || [])
+  //       setLoading(false)
+  //     })
+  //     .catch(() => {
+  //       setError(true)
+  //       setLoading(false)
+  //     })
+  // }, [])
+
   useEffect(() => {
-    fetch(URL)
+    fetch('/api/news')
       .then((res) => res.json())
       .then((data) => {
         setArticles(data.articles || [])
@@ -22,6 +35,7 @@ export function Home() {
         setLoading(false)
       })
   }, [])
+  
 
   if (loading) return <p className="text-center">Loading top headlines...</p>
   if (error) return <p className="text-center text-red-600">Failed to load news.</p>
