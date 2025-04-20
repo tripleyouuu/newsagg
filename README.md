@@ -40,7 +40,56 @@ This project was developed for a term assignment as part of my undergrad course.
 
 ---
 
+## 🛠 Setup & Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/news-aggregator.git
+cd news-aggregator
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+### 3. Set up Tailwind (if not already)
+
+```bash
+npx tailwindcss init -p
+```
+
+### 4. Add your NewsAPI Key
+
+Edit `NewsContext.jsx` or wherever the API key is used:
+
+```js
+const apiKey = 'YOUR_API_KEY_HERE';
+```
+
+Or store it as an environment variable using `.env`:
+
+```env
+VITE_NEWS_API_KEY=your_api_key_here
+```
+
+> And reference it in code with `import.meta.env.VITE_NEWS_API_KEY`.
+
+### 5. Run the Dev Server
+
+```bash
+npm run dev
+```
+
+App runs on `http://localhost:5173`
+
+---
+
 ## 💡 Future Improvements
+
+If/when I find the time to work on this project again, I'd add these features to improve it:
 
 - Pagination
 - Search bar with debouncing
