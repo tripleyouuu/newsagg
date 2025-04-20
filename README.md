@@ -1,6 +1,6 @@
 # 📰 News Aggregator
 
-A simple, professional, old-timey news aggregator built with **React**, **Tailwind CSS**, and the **NewsAPI**. Users can browse top headlines, filter by category, view article details, and save favorite posts with persistent storage via `localStorage`.
+A simple, professional, old-timey news aggregator built with **React**, **Tailwind CSS**, and the **NewsAPI**. Users can browse top headlines, filter by category, view article details, search using custom keywords, and save favorite posts with persistent storag.
 
 ---
 
